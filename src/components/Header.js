@@ -2,7 +2,7 @@ import AppLogo from "../assests/images/AppLogo.jpg";
 
 const Title = () => {
   return (
-    <div>
+    <div className="cursor-pointer">
       <img src={AppLogo} alt="App Logo" className="w-10" />
     </div>
   );
@@ -10,7 +10,7 @@ const Title = () => {
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center p-2 w-3/5 mx-auto">
+    <div className="flex justify-between items-center p-2 w-4/5 mx-auto">
       <Title />
       <div>
         <div className="flex text-gray-600">
