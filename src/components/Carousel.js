@@ -1,18 +1,19 @@
 import { IMG_CDN_LINK } from "../utils/constants";
 
-const RestaurantCard = ({ restaurant }) => {
-  const { name, avgRating, cloudinaryImageId, cuisines } = restaurant.info;
+const Carousel = ({ restaurant }) => {
+  const { name, avgRating, cloudinaryImageId, cuisines, areaName } =
+    restaurant.info;
 
   return (
     <div className="rounded-lg hover:shadow-lg cursor-pointer hover:rounded-3xl">
-      <div className="w-52 h-36 rounded-2xl m-2">
+      <div className="w-40 h-30 rounded-2xl m-1">
         <img
           src={IMG_CDN_LINK + cloudinaryImageId}
           alt="Restaurant Image"
-          className="w-52 h-36 rounded-2xl"
+          className="w-40 h-24 rounded-2xl"
         />
       </div>
-      <div className="px-3 my-2 w-56">
+      <div className="px-3 my-2 w-40">
         <h1 className="text-xs font-semibold">{name}</h1>
         <div className="flex my-1 items-center">
           <span className="bg-green-700 border-gray-500 text-white h-3 w-3 rounded-full">
@@ -31,12 +32,13 @@ const RestaurantCard = ({ restaurant }) => {
           </span>{" "}
           <h1 className="text-[9px] font-semibold px-1"> {avgRating}</h1>
         </div>
-        <h1 className="text-[9px] font-mono text-gray-600">
+        <h1 className="text-[9px] font-mono text-gray-600 truncate">
           {cuisines.join(", ")}
         </h1>
+        <h1 className="text-[9px] font-mono text-gray-600">{areaName}</h1>
       </div>
     </div>
   );
 };
 
-export default RestaurantCard;
+export default Carousel;
