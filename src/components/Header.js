@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import AppLogo from "../assests/images/AppLogo.jpg";
 
 const Title = () => {
   return (
     <div className="cursor-pointer">
-      <img src={AppLogo} alt="App Logo" className="w-10" />
+      <a href="/">
+        <img src={AppLogo} alt="App Logo" className="w-10" />{" "}
+      </a>
     </div>
   );
 };
@@ -15,7 +18,7 @@ const Header = () => {
       <div>
         <div className="flex text-gray-600">
           <h1 className="mx-7 text-xs font-semibold cursor-pointer  hover:text-orange-600">
-            About
+            <Link to="/about"> About </Link>
           </h1>
           <h1 className="mx-7 text-xs font-semibold cursor-pointer  hover:text-orange-600">
             Sign In

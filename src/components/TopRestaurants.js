@@ -1,5 +1,3 @@
-import { useState } from "react";
-import RestaurantCard from "./RestaurantCard";
 import Carousel from "./Carousel";
 
 const TopRestaurants = ({ restaurants }) => {

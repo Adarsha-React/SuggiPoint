@@ -48,9 +48,9 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="border-t border-gray-300 mt-2">
+      {/* <div className="border-t border-gray-300 mt-2">
         <TopRestaurants restaurants={topRestaurants} />
-      </div>
+      </div> */}
 
       <div>
         <h1 className="font-bold border-t border-gray-300 mt-5 mb-2">

@@ -5,7 +5,7 @@ const Carousel = ({ restaurant }) => {
     restaurant.info;
 
   return (
-    <div className="rounded-lg hover:shadow-lg cursor-pointer hover:rounded-3xl">
+    <div className="rounded-lg hover:shadow-lg cursor-pointer hover:rounded-3xl p-1 h-full">
       <div className="w-40 h-30 rounded-2xl m-1">
         <img
           src={IMG_CDN_LINK + cloudinaryImageId}
