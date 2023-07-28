@@ -4,12 +4,12 @@ const RestaurantCard = ({ restaurant }) => {
   const { name, avgRating, cloudinaryImageId, cuisines } = restaurant.info;
 
   return (
-    <div className="rounded-lg hover:shadow-lg cursor-pointer hover:rounded-3xl">
+    <div className="rounded-lg hover:shadow-lg cursor-pointer hover:rounded-3xl h-full">
       <div className="w-52 h-36 rounded-2xl m-2">
         <img
           src={IMG_CDN_LINK + cloudinaryImageId}
           alt="Restaurant Image"
-          className="w-52 h-36 rounded-2xl"
+          className="w-52 h-36 rounded-xl"
         />
       </div>
       <div className="px-3 my-2 w-56">

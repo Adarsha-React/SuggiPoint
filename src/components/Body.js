@@ -3,6 +3,7 @@ import { RES_CDN_LINK } from "../utils/constants";
 import RestaurantCard from "./RestaurantCard";
 import { filterRestaurants } from "../utils/helpers";
 import TopRestaurants from "./TopRestaurants";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState(null);
@@ -29,8 +30,8 @@ const Body = () => {
   return !filteredRestaurants ? (
     <h1>Loading...</h1>
   ) : (
-    <div className="w-4/5 p-2 mx-auto border-t border-gray-300 my-4 ">
-      <div className="mb-10">
+    <div className="w-4/5 p-2 mx-auto">
+      <div className="border-b border-gray-300 mt-2">
         <input
           type="text"
           placeholder="Search"
@@ -53,15 +54,17 @@ const Body = () => {
       </div> */}
 
       <div>
-        <h1 className="font-bold border-t border-gray-300 mt-5 mb-2">
+        <h1 className="font-bold my-3">
           Restaurants with online food delivery in Bangalore
         </h1>
         <div className="flex flex-wrap gap-6">
           {filteredRestaurants.map((restaurant) => (
-            <RestaurantCard
+            <Link
+              to={"/restaurant/" + restaurant?.info?.id}
               key={restaurant?.info?.id}
-              restaurant={restaurant}
-            />
+            >
+              <RestaurantCard restaurant={restaurant} />
+            </Link>
           ))}
         </div>
       </div>
