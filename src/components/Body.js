@@ -3,11 +3,11 @@ import { RES_CDN_LINK } from "../utils/constants";
 import RestaurantCard from "./RestaurantCard";
 import { filterRestaurants } from "../utils/helpers";
 import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState(null);
   const [filteredRestaurants, setFilteredRestaurants] = useState(null);
-  const [topRestaurants, setTopRestaurants] = useState(null);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -23,11 +23,10 @@ const Body = () => {
     setFilteredRestaurants(
       json.data.cards[5].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setTopRestaurants(json?.data?.cards[2]?.card?.card);
   };
 
   return !filteredRestaurants ? (
-    <h1>Loading...</h1>
+    <Shimmer />
   ) : (
     <div className="w-4/5 p-2 mx-auto">
       <div className="border-b border-gray-300 mt-2">

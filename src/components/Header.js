@@ -5,7 +5,7 @@ const Title = () => {
   return (
     <div className="cursor-pointer">
       <a href="/">
-        <img src={AppLogo} alt="App Logo" className="w-10" />{" "}
+        <img src={AppLogo} alt="App Logo" className="w-10" />
       </a>
     </div>
   );
