@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { RES_CDN_LINK } from "../utils/constants";
 import RestaurantCard from "./RestaurantCard";
 import { filterRestaurants } from "../utils/helpers";
-import TopRestaurants from "./TopRestaurants";
 import { Link } from "react-router-dom";
 
 const Body = () => {
@@ -49,9 +48,6 @@ const Body = () => {
           Search
         </button>
       </div>
-      {/* <div className="border-t border-gray-300 mt-2">
-        <TopRestaurants restaurants={topRestaurants} />
-      </div> */}
 
       <div>
         <h1 className="font-bold my-3">
